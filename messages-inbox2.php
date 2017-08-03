@@ -164,9 +164,15 @@ $sname='';
 <head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>Inbox</title>
-		<link rel="stylesheet" href="style4.css" />
+		<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
 		<style>
-
+		*{
+			margin: 0px;
+			width: 100%;
+		}
+		html,body{
+			width: 100%;
+		}
 				.give_container {
 					height: 30px;
 					float: left;
@@ -206,7 +212,32 @@ $sname='';
 				}
 				.mesbox{background-color:grey;}
 				.mesbox:hover{background-color:green;}
-		</style>
+
+				#logoutbu{
+					background-color:maroon;
+					border-radius:0% 0% 0% 14%;
+					color:white;padding:5px;
+					float:right;
+					width:80px;
+					border:solid 1px maroon;
+					outline:none;
+					cursor: pointer;
+					border-left: solid 1px white;
+					border-bottom: solid 1px white;
+				}
+				::-webkit-scrollbar {
+						width: 8px;
+						opacity: 0.9;
+						background:#d6dbdf;
+				}
+				::-webkit-scrollbar-thumb {
+					width:7px;
+					background:  #196f3d;
+					border-radius:4%;
+				}
+				</style>
+		<link rel="stylesheet" href="hellostyle.css"/>
+
 		<script  type="text/javascript" src="jquery.js"></script>
 		<script type="text/javascript" src="testscript.js"></script>
 		<script type="text/javascript" src="scriptstay.js"></script>
@@ -229,8 +260,7 @@ $sname='';
 							});
 				});
 		</script>
-		<link rel="stylesheet" href="style4.css" />
-		<link rel="stylesheet" href="stylemess.css" />
+
 </head>
 
 
