@@ -162,112 +162,113 @@ $sname='';
 <!doctype html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Inbox</title>
-<link rel="stylesheet" href="style4.css" />
-<style>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Inbox</title>
+		<link rel="stylesheet" href="style4.css" />
+		<style>
 
-}
-.give_container {
-	height: 30px;
-	float: left;
-}
-.give_container input {
-	height: 20px;
-	width: 200px;
-	padding: 3px;
-	border: 1px solid #cccccc;
-	border-radius: 0;
-}
-.give_container ul {
-	padding:0px 0px;
-	border: 1px solid #eaeaea;
-	position: absolute;
-	z-index: 9;
-	background: grey;
-	list-style: none;
-	margin-left:23px;
-	margin-top:-5px;
-}
-.give_container ul li {
-	padding: 2px;
-	color:black;
-}
-.give_container ul li:hover {
-	background: #eaeaea;
-}
-#friend_list_list {
-	display: none;
-}
-#friending_list_list {
-	display: none;
-}
-.goti:hover{
-	cursor:pointer;
-}
-.mesbox{background-color:grey;}
-.mesbox:hover{background-color:green;}
-</style>
-<script  type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="testscript.js"></script>
-<script type="text/javascript" src="scriptstay.js"></script>
-<script type="text/javascript">
-$(function(){
-var auto_refresh = setInterval(
-function()
-{
-$('#left3').load('mess.php');
-return false;}, 2000);
-});
-$("document").ready(function(){
-	var chhk=0;
-	$("#mennu").hide(00);
-	$("#menuicon").click(function(){
-	if(chhk==0) {
-		$("#mennu").show(00); chhk=1;}
-	else {
-		$("#mennu").hide(00); chhk=0;}
-			});
-});
-</script><link rel="stylesheet" href="style4.css" />
-<link rel="stylesheet" href="stylemess.css" />
+				.give_container {
+					height: 30px;
+					float: left;
+				}
+				.give_container input {
+					height: 20px;
+					width: 200px;
+					padding: 3px;
+					border: 1px solid #cccccc;
+					border-radius: 0;
+				}
+				.give_container ul {
+					padding:0px 0px;
+					border: 1px solid #eaeaea;
+					position: absolute;
+					z-index: 9;
+					background: grey;
+					list-style: none;
+					margin-left:23px;
+					margin-top:-5px;
+				}
+				.give_container ul li {
+					padding: 2px;
+					color:black;
+				}
+				.give_container ul li:hover {
+					background: #eaeaea;
+				}
+				#friend_list_list {
+					display: none;
+				}
+				#friending_list_list {
+					display: none;
+				}
+				.goti:hover{
+					cursor:pointer;
+				}
+				.mesbox{background-color:grey;}
+				.mesbox:hover{background-color:green;}
+		</style>
+		<script  type="text/javascript" src="jquery.js"></script>
+		<script type="text/javascript" src="testscript.js"></script>
+		<script type="text/javascript" src="scriptstay.js"></script>
+		<script type="text/javascript">
+				$(function(){
+				var auto_refresh = setInterval(
+				function()
+				{
+				$('#left3').load('mess.php');
+				return false;}, 2000);
+				});
+				$("document").ready(function(){
+					var chhk=0;
+					$("#mennu").hide(00);
+					$("#menuicon").click(function(){
+					if(chhk==0) {
+						$("#mennu").show(00); chhk=1;}
+					else {
+						$("#mennu").hide(00); chhk=0;}
+							});
+				});
+		</script>
+		<link rel="stylesheet" href="style4.css" />
+		<link rel="stylesheet" href="stylemess.css" />
 </head>
-<body bgcolor="cornflowerblue" id="container">
-<div id="mennu" style="position:absolute;margin-top:50px;width:50%;">
-<ul >
-	<li><a href="directory2.php" style="color:white;text-decoration:none;border:none;">Directory</a></li>
-	<li ><a href="setting.php" style="color:white;text-decoration:none;">Setting</a></li>
-	<li><a href="index.php" style="color:white;text-decoration:none;">Home</a></li>
-	<li style="padding:0px"><form method="post" align="center" action="login2.php"><input type="submit" style="width:100%;height:70px;background-color:black;color:white;font-size:20px;"name="Logout" value="Logout"/></form></li>
-</ul></div>
-<div class="header">
-	<div style="height:100%;width:20%;float:left;">
-	<img id="menuicon" style="height:100%;width:100%;float:left;" src="menu.png"/></div><div style="text-align:center;font-size:40px;float:left;width:80%;color:white;">hELLO bUDDY</div>
-</div>
-<div class="top1">
-	....<form method="post" align="center" action="login2.php"><input type="submit" style="width:80px;"name="Logout" value="Logout"/></form>
-	<a href="directory2.php">Directory</a>
-	<a href="setting.php">Setting</a>
-	<a href="index.php">Home</a>
 
 
+<body bgcolor="#34495E" id="container">
+		<div id="msg_show"  style="position:fixed;height:30px;width:30px;border:solid 2px white;display:none;z-index:6;text-align:center;margin-top:100px;margin-left:93%;font-size:20px;"><?php echo '<a style="color:white;text-decoration:none" href="messages-inbox2.php">'.$msg_count.'</a><input type="hidden" value="'.$msg_count.'" id="msg_but" />';?></div>
+		<div id="mennu" style="position:absolute;margin-top:50px;width:50%;display:none;">
+			<ul >
+				<li><a href="messages-inbox2.php" style="color:white;text-decoration:none;border:none;">Messages</a></li>
+				<li ><a href="directory2.php" style="color:white;text-decoration:none;">Directory</a></li>
+				<li><a href="setting.php" style="color:white;text-decoration:none;">Setting</a></li>
+				<li style="padding:0px"><form method="post" align="center" action="login2.php"><input type="submit" style="width:100%;height:70px;background-color:black;color:white;font-size:20px;"name="Logout" value="Logout"/></form></li>
+			</ul>
+		</div>
 
-</div>
 
-		<hr>
-		<div class="head1">
-			<div class="left1">
-
-							<h1 align="center" style="margin-top:20px; background-color:red;padding-top:10px; font-size:60px;">hELLO-bUDDY</h1><hr color="red"><hr><hr color="red">
-							<br>
-						<div class="hell" style="padding-left:20px;"><?php echo $p;?></div>
-
+			<div class="headingi">
+						<h1 >Hello Buddy</h1>
 			</div>
-			<div id="left4" class="left4"align="center;" ><?php echo $d;?>
-
+			<div class="heading2">
+				<a href="messages-inbox2.php">Messages</a>
+				<a href="directory2.php">Directory</a>
+				<a href="setting.php">Setting</a>
 			</div>
-			<div id="left3" class="left3" >
 
+
+							<form method="post" align="right" action="login2.php" style="position:fixed;z-index:40;"><input type="submit"  id="logoutbu" name="Logout" value="Logout"/></form>
+
+
+	<div class="total" style="float:left; width:100%;">
+
+		<div class="left1">
+
+			<div class="hell" style="padding-left:20px;"><?php echo $p;?></div>
+
+
+		</div>
+
+		<div class="filling" >
 			<?php
 				$q='';
 				$select=100;
@@ -308,37 +309,35 @@ $("document").ready(function(){
 				?>
 
 
+		</div>
 
-			</div>
-			<div class="helli" style="padding-left:20px;"><li style="background-color:green;text-decoration:none;list-style:none;text-align:center;color:white;">Conversation:</li><br><?php echo $p;?></div>
-			<div class="right1">
+		<div class="content">
+			<p>
+					<form method="post" align="center" action="messages-inbox2.php" style="padding:10px;">
+						<input name="time" type="hidden" value="<?php echo time(); ?>" />
+
+						<li style="background-color:green;text-decoration:none;list-style:none;color:white;">Compose:</li><br>
+							<div class="give_container">
+							<input type="hidden" id="get_id"  value="" name="rcivrid" style="height:30px; width:230px;">
+							<textarea  id="friend_list" placeholder="Enter Name" onkeyup="tocomplet()" style="height:30px; width:230px;"></textarea><br>
+							<ul id="friend_list_list" style="background-color:grey;width:200px;color:white;" ></ul>
+
+
+						</p>
 						<p>
-								<form method="post" align="center" action="messages-inbox2.php" style="padding:10px;">
-									<input name="time" type="hidden" value="<?php echo time(); ?>" />
 
-									<li style="background-color:green;text-decoration:none;list-style:none;color:white;">Compose:</li><br>
-										<div class="give_container">
-										<input type="hidden" id="get_id"  value="" name="rcivrid" style="height:30px; width:230px;">
-										<textarea  id="friend_list" placeholder="Enter Name" onkeyup="tocomplet()" style="height:30px; width:230px;"></textarea><br>
-										<ul id="friend_list_list" style="background-color:grey;width:200px;color:white;" ></ul>
+							<textarea style="height:90px; width:230px;" placeholder="Write Messages.." name="mes"></textarea><br>
+						</p>
+						<p>
 
-
-									</p>
-									<p>
-
-										<textarea style="height:90px; width:230px;" placeholder="Write Messages.." name="mes"></textarea><br>
-									</p>
-									<p>
-
-										<input type="submit" value="send"style="background-color:blue;color:white;cursor:pointer" name="send"/>
-									</p><br>
-									<ul><h3>Messages-Request</h3><hr><?php echo $mysend;?></ul>
-								</form>
-</div></div>
+							<input type="submit" value="send"style="background-color:blue;color:white;cursor:pointer" name="send"/>
+						</p><br>
+						<ul><h3>Messages-Request</h3><hr><?php echo $mysend;?></ul>
+					</form>
 </div>
-
+		</div>
+	</div>
 </div>
-
 
 </body>
 
