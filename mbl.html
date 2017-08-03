@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+*{margin:0px;width:100%;}
+.header{width:100%;height:100px;background-color:red;border-radius:5%;}
+.body1{width:100%;text-align:center;background-color:lightblue;font-size:15px;min-height:900px;}
+#mennu ul{list-style:none;text-align:center;padding-top:30px;text-decoration:none;}
+#mennu li{font-size:25px;background-color:black;width:35%;color:white;padding-top:30px;list-style:none;margin-left:-50px;}
+#mennu li:hover{background-color:grey;}
+</style>
+<script  type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+	
+$("document").ready(function(){
+	var chhk=0;
+	$("#mennu").hide(00);
+	$("#menuicon").click(function(){
+	if(chhk==0) {
+		$("#mennu").show(00); chhk=1;}
+	else {
+		$("#mennu").hide(00); chhk=0;}
+			});
+});
+</script>
+</head>
+<body><div id="mennu">
+<ul style="position:absolute;margin:left:-50px;margin-top:70px;">
+	<li>messages<hr></li>
+	<li>setting<hr></li>
+	<li>profile<hr></li>
+</ul></div>
+<div class="header">
+	<div style="height:100%;width:20%;float:left;">
+	<img id="menuicon" style="height:100%;width:100%;float:left;" src="menu.png"/></div><div style="text-align:center;font-size:40px;float:left;width:80%;color:white;">hELLO bUDDY</div> 
+</div>
+<div class="body1">
+	hello
+</div>
+</body>
+</html>

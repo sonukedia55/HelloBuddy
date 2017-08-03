@@ -1,0 +1,22 @@
+*{
+margin:0px;
+}
+#navigation{
+font-size:20px;
+min-height:10px;
+}
+ul{
+text-decoration:none;
+}
+li{
+list-style:none;
+float:left;
+padding:0px;
+border:solid 1px black;
+margin:0px;
+color:white;
+background-color:blue;
+}
+a{
+text-decoration:none;
+}

@@ -1,0 +1,22 @@
+var data=new Array();
+$(document).ready(function(){
+$.ajax({
+async:false,
+type:"post",
+dataType:"json",
+url:"/Uhouse/uhouse/index.php/Home/Index/marker",
+success:function(result){
+var json=result.data;
+$.each(json, function(idx, obj) {
+for(i=0;i<json.length;i++){
+data[i] =obj.rent_condo_loc;
+
+            }
+            
+        });
+    }
+});
+});
+
+alert(data);
+

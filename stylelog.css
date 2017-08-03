@@ -1,0 +1,25 @@
+*{width:100%;font-family:calibri;margin: 0px;}
+
+#bg{
+	position:absolute;width:100%;height:100%;opacity: 0.5;float: left;z-index: -1000;
+}
+
+@media screen and (max-width:500px){
+*{width:98%;margin:0px;padding:0px;}
+#bg{
+	position:fixed;width:300%;height:500px;}
+ .left1{
+ width:80%;float:left;margin-top:2%;text-align:center;
+ }
+.head1{
+ width:100%;
+ }
+.right1{
+ width:80%;float:left;margin-top:10%;margin-left:10%;
+ }
+ #forrm1{width:100%;color:black;}
+ #forrm2{width:100%;color:black;}
+ #heading{font-size:40px;height:60px; opacity:0.8;width:110%;margin:0%;margin-top:-3%;color:white;text-align:center;}
+
+
+}

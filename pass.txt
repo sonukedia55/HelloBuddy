@@ -1,0 +1,11 @@
+woowfood......>woowfood123
+hellobuddy.esy.es.....>hellobuddy123.......sql.....>buddyhello123......database....>hellobuddy......hostinger
+
+
+$ddf = mysqli_query($con, "SELECT  login_at FROM s_users  WHERE ID=1 ");
+		{
+		
+		while($r = mysqli_fetch_array($ddf)){
+			$aidd=$r['login_at'];
+			$d2=date('y-m-d H:i:s');
+		$new= strtotime($d2)-strtotime($aidd);}}
