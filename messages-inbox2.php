@@ -225,6 +225,19 @@ $sname='';
 					border-left: solid 1px white;
 					border-bottom: solid 1px white;
 				}
+				.left4{width:50%; min-height:380px;position:absolute;solute;float:left;font-size:14px;margin-left:30%;}
+				.left3{width:42%; min-height:380px; background-color:lightblue;float:left;font-size:14px;padding:5%;margin-top:5%;}
+				.helli{display:none;}
+				.top1{
+				width:100%;height:80px; background-color:black;float:left;text-align:right;padding-top:10px;}
+				.header{display:none;}
+				#mennu{display:none;}
+				.containng{color:white;background-color:black;border:solid 2px red;padding:10px;width:190px;}
+				.contentmy{margin-left:200px;width:220px;}
+				#conmy{background-color:orange;border:solid 2px red;padding:10px;width:190px;border-radius: 10px;}
+				.contentm{margin-left:0px;width:220px;}
+				#conm{background-color:lightgreen;border:solid 2px red;padding:10px;border-radius: 10px;}
+
 				::-webkit-scrollbar {
 						width: 8px;
 						opacity: 0.9;
