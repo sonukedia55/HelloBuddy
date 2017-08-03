@@ -245,7 +245,7 @@ $e='';
 <head>
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>hello-buddy</title>
+<title>Hello Buddy</title>
 <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
 <style>
 *{
@@ -340,7 +340,7 @@ $("document").ready(function(){
 });
 function mmc(evt) {
 	 var keyword=evt.id;
-	$('#'+keyword+'a').fadeOut(1000);
+	$('#'+keyword+'a').fadeOut(200);
 
 	}
 </script>
