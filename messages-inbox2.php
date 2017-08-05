@@ -112,33 +112,39 @@ if(isset($_POST['mess'])){
 											$check=0;};}
 
 											if($do==1){
-											$le+=1;
-											$get[$x]=$mid;
-											$dff = mysqli_query($con, "SELECT user_nicename FROM s_users WHERE ID=$mid ");{
-												while($r4 = mysqli_fetch_array($dff)){
-											$sname=$r4['user_nicename'];}}
-											$p.='<br><div id="sider" style="width:200px;float:left;"><form action="messages-inbox2.php" method="post"><input type="hidden" name="reciv" value="'.$mid.'"/><input class="mesbox" type="submit" style="border:none;font-size:20px;height:40px;width:120px;"  name="mess" value="'.$sname.'"/></form></div><br>';
-									$dffg = mysqli_query($con, "SELECT message_recipient_id,message_sender_id,message_content FROM s_messages WHERE message_recipient_id='$aid' and message_sender_id='$mid' or message_recipient_id='$mid' and message_sender_id='$aid' ORDER BY ID DESC LIMIT 1");{
-										while($r7 = mysqli_fetch_array($dffg)){
-											$mess=$r7['message_content'];
-											$mid=$r7['message_sender_id'];
-											$ssid=$r7['message_recipient_id'];
+														$le+=1;
+														$get[$x]=$mid;
+														$dff = mysqli_query($con, "SELECT user_nicename FROM s_users WHERE ID=$mid ");{
+															while($r4 = mysqli_fetch_array($dff)){
+														$sname=$r4['user_nicename'];}}
+														$p.='<br><div id="sider" style="width:200px;float:left;">
+																				<form action="messages-inbox2.php" method="post">
+																				<input type="hidden" name="reciv" value="'.$mid.'"/>
+																				<input class="mesbox" type="submit" style="border:none;font-size:20px;height:40px;width:120px;"  name="mess" value="'.$sname.'"/></form>
+																			</div><br>';
+												$dffg = mysqli_query($con, "SELECT message_recipient_id,message_sender_id,message_content FROM s_messages WHERE message_recipient_id='$aid' and message_sender_id='$mid' or message_recipient_id='$mid' and message_sender_id='$aid' ORDER BY ID DESC LIMIT 1");{
+													while($r7 = mysqli_fetch_array($dffg)){
+														$mess=$r7['message_content'];
+														$mid=$r7['message_sender_id'];
+														$ssid=$r7['message_recipient_id'];
 
-											$dff = mysqli_query($con, "SELECT user_nicename FROM s_users WHERE ID=$mid ");{
-												while($r4 = mysqli_fetch_array($dff)){
-												$sname=$r4['user_nicename'];
+														$dff = mysqli_query($con, "SELECT user_nicename FROM s_users WHERE ID=$mid ");{
+															while($r4 = mysqli_fetch_array($dff)){
+															$sname=$r4['user_nicename'];
 
-												if($mid==$aid){
-													if(($select==$mid)||($select==$ssid)){
-													$p.='<div class="content" ><h3 align="right" ></h3><p class="containng" ><b>you:</b>  '.$mess.'</p></div>';}else
-													{$p.='<div class="content" "><h3 align="right" ></h3><p class="containng" ><b>you:</b>  '.$mess.'</p></div>';}
-												}else{
-												$p.='<div class="content" ><h3 ></u></h3><p class="containng" >'.$mess.'</p></div>';}
-												}
-													}
-													}
+															if($mid==$aid){
+																if(($select==$mid)||($select==$ssid)){
+																		$p.='<div class="content" ><h3 align="right" ></h3><p class="containng" ><b>you:</b>  '.$mess.'</p></div>';
+															}else
+																{
+																	$p.='<div class="content" "><h3 align="right" ></h3><p class="containng" ><b>you:</b>  '.$mess.'</p></div>';}
+															}else{
+															$p.='<div class="content" ><h3 ></u></h3><p class="containng" >'.$mess.'</p></div>';}
+															}
+																}
+																}
 
-				}$p.='<hr style="width:50%;">';
+							}$p.='<hr style="width:50%;">';
 				}}
 		}
 		if($select==100){
