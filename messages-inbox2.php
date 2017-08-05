@@ -134,12 +134,12 @@ if(isset($_POST['mess'])){
 
 															if($mid==$aid){
 																if(($select==$mid)||($select==$ssid)){
-																		$p.='<div class="content" ><h3 align="right" ></h3><p class="containng" ><b>you:</b>  '.$mess.'</p></div>';
+																		$p.='<div class="contentn" ><h3 align="right" ></h3><p class="containng" ><b>you:</b>  '.$mess.'</p></div>';
 															}else
 																{
-																	$p.='<div class="content" "><h3 align="right" ></h3><p class="containng" ><b>you:</b>  '.$mess.'</p></div>';}
+																	$p.='<div class="contentn" "><h3 align="right" ></h3><p class="containng" ><b>you:</b>  '.$mess.'</p></div>';}
 															}else{
-															$p.='<div class="content" ><h3 ></u></h3><p class="containng" >'.$mess.'</p></div>';}
+															$p.='<div class="contentn" ><h3 ></u></h3><p class="containng" >'.$mess.'</p></div>';}
 															}
 																}
 																}
