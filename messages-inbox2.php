@@ -83,7 +83,7 @@ if(isset($_POST['mess'])){
 
 
 		}
-		$mysend='<table style="text-align:left;width:200px;">';
+		$mysend='<table style="text-align:left;">';
 		$dfffl = mysqli_query($con, "SELECT message_recipient_id,message_content FROM s_messages WHERE message_sender_id='$aid'  ORDER BY ID DESC");{
 							while($r32 = mysqli_fetch_array($dfffl)){
 									$ddd='';
