@@ -95,7 +95,7 @@ if(isset($_POST['mess'])){
 
 										$dfffi = mysqli_query($con, "SELECT ID FROM s_messages WHERE message_sender_id='$ridd' and message_recipient_id='$aid'  ORDER BY ID DESC");{
 												while($r33 = mysqli_fetch_array($dfffi)){ $ddd=$r33['ID'];}
-										if($ddd){$mysend.='';}else{$mysend.='<tr><td><a style="background-color:lightblue;text-align:left;">'.$nnname.'<td><a>'.$mees.'</td></tr>';}}
+										if($ddd){$mysend.='';}else{$mysend.='<tr><td style="width:40%;"><a style="background-color:#2980b9;text-align:left;color:#34495e;">'.$nnname.'</a></td><td style=""><a style="color:white;text-align:left;">'.$mees.'</a></td></tr>';}}
 							}
 		}
 
@@ -362,10 +362,10 @@ $sname='';
 
 		<div class="content">
 			<p>
-					<form method="post" align="center" action="messages-inbox2.php" style="padding:10px;">
+					<form method="post" align="center" action="messages-inbox2.php" >
 						<input name="time" type="hidden" value="<?php echo time(); ?>" />
 
-						<li style="background-color:green;text-decoration:none;list-style:none;color:white;">Compose:</li><br>
+						<li style="background-color:#2874a6;text-decoration:none;list-style:none;color:white;">COMPOSE</li><br>
 							<div class="give_container">
 							<input type="hidden" id="get_id"  value="" name="rcivrid" style="height:30px; width:230px;">
 							<textarea  id="friend_list" placeholder="Enter Name" onkeyup="tocomplet()" style="height:30px; width:230px;"></textarea><br>
@@ -381,8 +381,11 @@ $sname='';
 
 							<input type="submit" value="send"style="background-color:blue;color:white;cursor:pointer" name="send"/>
 						</p><br>
-						<ul><h3>Messages-Request</h3><hr><?php echo $mysend;?></ul>
+
 					</form>
+
+					<br>
+					<h3>Messages-Request</h3><hr><br><?php echo $mysend;?>
 </div>
 		</div>
 	</div>
