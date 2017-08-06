@@ -64,7 +64,7 @@ if(isset($_POST['send'])){
 			$dff = mysqli_query($con, "SELECT user_nicename FROM s_users WHERE ID=$med ");{
 												while($r4 = mysqli_fetch_array($dff)){
 											$sname=$r4['user_nicename'];}}
-											$d.='<hr style="width:60%;"><br><div style="width:80%;float:left;"><u><li style="background-color:blue;color:white;text-align:center">'.$sname.'</li></u><br><li style="color:white;text-align:center"><form action="messages-inbox2.php" method="post" ><input type="hidden" name="sender" value="'.$aid.'"/><input id="typingto" type="hidden" name="reciv" value="'.$med.'"/><textarea onkeyup="typingtest()"  id="reeply" style="height:40px; width:60%;" name="messag" placeholder="reply...." ></textarea><input type="submit" name="messg" name="mess" value="Reply" style="height:45px; width:20%;float:right;"/><br></form></li></div><br><br><br><Br>';
+											$d.='<br><div style="width:80%;float:left;"><u><li style="background-color:blue;color:white;text-align:center">'.$sname.'</li></u><br><li style="color:white;text-align:center"><form action="messages-inbox2.php" method="post" ><input type="hidden" name="sender" value="'.$aid.'"/><input id="typingto" type="hidden" name="reciv" value="'.$med.'"/><textarea onkeyup="typingtest()"  id="reeply" style="height:40px; width:60%;" name="messag" placeholder="reply...." ></textarea><input type="submit" name="messg" name="mess" value="Reply" style="height:45px; width:20%;float:right;"/><br></form></li></div><br><br><br><Br>';
 
 
 
@@ -79,7 +79,7 @@ if(isset($_POST['mess'])){
 			$dff = mysqli_query($con, "SELECT user_nicename FROM s_users WHERE ID=$med ");{
 												while($r4 = mysqli_fetch_array($dff)){
 											$sname=$r4['user_nicename'];}}
-											$d.='<hr style="width:60%;"><br><div style="width:80%;float:left;"><u><li style="background-color:blue;color:white;text-align:center">'.$sname.'</li></u><br><li style="color:white;text-align:center"><form action="messages-inbox2.php" method="post" ><input type="hidden" name="sender" value="'.$aid.'"/><input  id="typingto" type="hidden" name="reciv" value="'.$med.'"/><textarea onkeyup="typingtest()"  id="reeply" style="height:40px; width:60%;" name="messag" placeholder="Reply...." ></textarea><input type="submit" name="messg" name="mess" value="Reply" style="height:45px; width:20%;float:right;"/><br></form></li></div><br><br><br><Br>';
+											$d.='<br><div style="width:80%;float:left;"><u><li style="background-color:blue;color:white;text-align:center">'.$sname.'</li></u><br><li style="color:white;text-align:center"><form action="messages-inbox2.php" method="post" ><input type="hidden" name="sender" value="'.$aid.'"/><input  id="typingto" type="hidden" name="reciv" value="'.$med.'"/><textarea onkeyup="typingtest()"  id="reeply" style="height:40px; width:60%;" name="messag" placeholder="Reply...." ></textarea><input type="submit" name="messg" name="mess" value="Reply" style="height:45px; width:20%;float:right;"/><br></form></li></div><br><br><br><Br>';
 
 
 		}
@@ -312,12 +312,15 @@ $sname='';
 
 		<div class="left1">
 
-			<div class="hell" style="padding-left:20px;"><?php echo $p;?></div>
+			<div class="hell" style="padding-left:20px;padding-bottom:40px;"><?php echo $p;?></div>
+
 
 
 		</div>
 
-		<div class="filling" >
+		<div class="filling" style="padding-top:20px;" >
+
+			<?php echo $d;?>
 			<?php
 				$q='';
 				$select=100;
