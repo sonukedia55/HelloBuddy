@@ -158,7 +158,7 @@ $sname='';
 											$sname=$r4['user_nicename'];
 										}
 									}
-											$d.='<hr style="width:60%;"><br><div style="width:80%;float:left;"><u><li style="background-color:blue;color:white;text-align:center">'.$sname.'</li></u><br><li style="color:white;text-align:center"><form action="messages-inbox2.php" method="post" ><input type="hidden" name="sender" value="'.$aid.'"/><input  id="typingto" type="hidden" name="reciv" value="'.$med.'"/><textarea id="reeply" onkeyup="typingtest()" style="height:40px; width:60%;" name="messag" placeholder="Reply...." ></textarea><input type="submit" name="messg" name="mess" value="Reply" style="height:45px; width:20%;float:right;"/><br></form></li></div><br><br><br><Br>';
+											$d.='<br><div style="width:80%;float:left;"><u><li style="background-color:blue;color:white;text-align:center">'.$sname.'</li></u><br><li style="color:white;text-align:center"><form action="messages-inbox2.php" method="post" ><input type="hidden" name="sender" value="'.$aid.'"/><input  id="typingto" type="hidden" name="reciv" value="'.$med.'"/><textarea id="reeply" onkeyup="typingtest()" style="height:40px; width:60%;" name="messag" placeholder="Reply...." ></textarea><input type="submit" name="messg" name="mess" value="Reply" style="height:45px; width:20%;float:right;"/><br></form></li></div><br><br><br><Br>';
 
 		}
 
@@ -321,6 +321,7 @@ $sname='';
 		<div class="filling" style="padding-top:20px;" >
 
 			<?php echo $d;?>
+			<br>
 			<?php
 				$q='';
 				$select=100;
@@ -353,7 +354,7 @@ $sname='';
 																	}
 																	}
 
-								}$q.='<hr style="width:60%;">';
+								}
 						}
 
 
